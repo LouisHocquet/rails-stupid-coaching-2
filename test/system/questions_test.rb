@@ -4,7 +4,7 @@ class QuestionsTest < ApplicationSystemTestCase
   test "visiting /ask renders the form" do
     visit ask_url
     take_screenshot
-    assert_selector "h1", text: "Ask your coach anything"
+    assert_selector "p", text: "Ask your coach anything:"
   end
 
   test "saying Hello yields a grumpy response from the coach" do
