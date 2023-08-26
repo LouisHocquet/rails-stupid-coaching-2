@@ -1,6 +1,21 @@
 <h1>Coach Answer</h1>
 
-<p>Your question : <%= @your_question %> </p>
-<p>Coach answer  : <%= @coach_answer %> </p>
+<blockquote>
+  <p>
+    <% if @your_question.blank? %>
+      😶
+    <% else %>
+      <%= @your_question %>
+    <% end %>
+  </p>
+  <cite>-You</cite>
+</blockquote>
 
-<a href="ask">Ask another question</a>
+<blockquote>
+  <p>
+    <%= @coach_answer %>
+  </p>
+  <cite>-Coach</cite>
+</blockquote>
+
+<%= link_to "Ask a new question", ask_path %>
