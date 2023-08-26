@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get "ask", to: "question_controller#ask"
+  get 'ask', to: 'questions#ask', as: :ask
 end
